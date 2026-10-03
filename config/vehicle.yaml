@@ -1,0 +1,20 @@
+vehicle:
+  name: "VEGA Prototype Quad"
+
+  mass: 0.6
+
+  arm_length: 0.13
+
+  inertia:
+    Ixx: 0.005
+    Iyy: 0.005
+    Izz: 0.009
+
+  gravity: 9.81
+
+  motors:
+    max_rpm: 5000
+
+  propeller:
+    thrust_coefficient: 1.5e-5
+    torque_coefficient: 2.5e-7
