@@ -16,5 +16,7 @@ vehicle:
     max_rpm: 5000
 
   propeller:
+    # Thrust coefficient kf in N/(rad/s)^2 (provisional, uncalibrated).
     thrust_coefficient: 1.5e-5
+    # Reaction torque coefficient km in N*m/(rad/s)^2 (provisional, uncalibrated).
     torque_coefficient: 2.5e-7

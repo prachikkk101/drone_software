@@ -25,17 +25,21 @@ class MotorModel:
 
     def rpm_to_thrust(self, rpm):
         """
-        Simplified propeller thrust model.
+        Propeller thrust model.
+        Converts RPM to angular speed omega (rad/s), then computes
+        thrust = kf * omega^2 (Newtons), where kf is in N/(rad/s)^2.
         """
-
-        return self.kf * rpm**2
+        omega = rpm * (2.0 * np.pi / 60.0)
+        return self.kf * omega**2
 
     def rpm_to_torque(self, rpm):
         """
-        Simplified reaction torque.
+        Reaction torque model.
+        Converts RPM to angular speed omega (rad/s), then computes
+        reaction_torque = km * omega^2 (N*m), where km is in N*m/(rad/s)^2.
         """
-
-        return self.km * rpm**2
+        omega = rpm * (2.0 * np.pi / 60.0)
+        return self.km * omega**2
 
     def update(self, commands):
 
